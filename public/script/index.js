@@ -20,7 +20,7 @@ $("#joinGroup").submit(function (event) {
     return;
 });
 
-$("#createGroup").submit(function () {
+$("#createGroup").submit(function (event) {
     event.preventDefault();
     var adminName = $("#input3").val();
     var groupName = $("#input4").val();
