@@ -1,0 +1,24 @@
+{
+  "name": "QandA",
+  "version": "1.0.0",
+  "private": false,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/sihamEgb/Qanda"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "debug": "~0.7.4",
+    "ejs": "~0.8.5",
+    "express": "~4.2.0",
+    "indexof": "0.0.1",
+    "morgan": "~1.0.0",
+    "socket.io": "^1.0.6",
+    "static-favicon": "~1.0.0"
+  }
+}

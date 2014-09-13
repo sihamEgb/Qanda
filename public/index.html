@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> Q and A App </title>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="container clear-top" id="main">
+
+        <div class="container-fluid">
+            <div class="container" id="imageContainer">
+                <div class="caption">
+                    <h3> QandA </h3>
+                    <h4><p class="bg-info">Your Lectures and Presentations Companion</p></h4>
+                </div>
+                <img class="img-rounded img-responsive" id="logo" src="resources/home.png" alt="...">
+            </div>
+            <div id="likeButton" class="fb-like" data-href="https://siham.com" data-layout="button_count"
+                 data-action="like" data-show-faces="false" data-share="true"></div>
+        </div>
+
+
+        <div>
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#joinGroup" role="tab" data-toggle="tab">Join Group </a></li>
+                <li><a href="#createGroup" role="tab" data-toggle="tab">Create Group </a></li>
+
+            </ul>
+
+            <div id="myTabContent" class="tab-content">
+
+                <div class="tab-pane fade in active" id="joinGroup">
+                    <form class="form-signin" role="form">
+                        <h3 class="form-signin-heading">Join Your Group</h3>
+                        <input id="input1" type="text" class="form-control" placeholder="User Name" required autofocus>
+                        <input id="input2" type="text" class="form-control" placeholder="Group Id" required autofocus>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Join Group</button>
+                    </form>
+                </div>
+
+                <div class="tab-pane fade" id="createGroup">
+                    <form class="form-signin" role="form">
+                        <h3 class="form-signin-heading">Create Your Own Group</h3>
+                        <input id="input3" type="text" class="form-control" placeholder="User Name" required autofocus>
+                        <input id="input4" type="text" class="form-control" placeholder="Group Name" required autofocus>
+                        <textarea id="input5" type="text" class="form-control" placeholder="Group Info" required
+                                  autofocus></textarea>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Group</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer" class="panel-footer">
+    <div class="panel-body">
+
+        <ul class="nav nav-pills">
+            <li class="active"><a href="index.html">Home </a></li>
+            <li><a href="contact.html">Contact me </a></li>
+            <li><a href="about.html">About this app </a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Le javascript -->
+
+<script src='http://code.jquery.com/jquery-2.1.1.min.js' type='text/javascript'></script>
+<script src='script/index.js' type='text/javascript'></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

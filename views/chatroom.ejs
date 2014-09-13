@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title> QandA App </title>
+	
+	
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- style sheets -->   
+   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/groupPage.css" media="screen"/>
+
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<script>
+		var channelId="<%= room_number %>";
+		var adminName="<%= admin_name %>";
+		var groupInfo="<%= group_info %>";
+		var userName="<%= user_name %>";
+		
+		
+	
+</script>
+</head>
+<body>
+
+<div id="wrap">
+    <div class="container clear-top" id="main">
+
+        <div id="bodyContainer" class="container">
+
+
+            <div class="container" id="header">
+                <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                    <img class="img-rounded img-responsive" id="logo" src="/resources/home.png" alt="...">
+
+                    <div class="container">
+                        <p id="groupName"> Group Name</p>
+
+                       <p id="groupInfo"> Group Information goes here</p>
+                       <p id="adminUser"> admin </p>
+                    
+					</div>
+                </nav>
+            </div>
+
+            <div class="container" id="enterMessage">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-md-2">
+
+                            <div class="form-group">
+                                <select class="form-control" id="selectOptions">
+                                    <option value="comment">Comment</option>
+                                    <option value="question">Question</option>
+                                    <option value="extra">Extra</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea type="text" class="form-control" id="message" placeholder="Enter message"></textarea>
+                    </div>
+
+                    <input type="submit" class="btn btn-primary" value="send">
+                    <button type="reset" class="btn btn-danger" value="Reset">Reset</button>
+                </form>
+            </div>
+
+
+
+                <div class="container" id="messagesBox">
+
+
+                </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer" class="panel-footer">
+    <div class="panel-body">
+        <ul class="nav nav-pills">
+            <li>
+                <button type="button" id="showAllButton" class="btn btn-info footerButton">Show All</button>
+            </li>
+            <li>
+                <button type="button" id="showQuestionsButton" class="btn btn-info footerButton">Show Questions
+                </button>
+            </li>
+            <li>
+                <button id="printButton" type="button" class="btn btn-info footerButton">print</button>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+
+
+<!-- Le javascript -->
+
+	<script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
+	<script src='http://code.jquery.com/jquery-2.1.1.min.js' type='text/javascript'></script>
+    <script src='/script/groupPage.js' type='text/javascript'></script>	
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+</div>
+</body>
+</html>
