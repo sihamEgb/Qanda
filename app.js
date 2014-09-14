@@ -64,11 +64,19 @@ var ip = process.env.OPENSHIFT_NODEJS_IP;
             ipaddress = "127.0.0.1";
         };
 
+var LISTEN_PORT = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var LISTEN_IP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 
+//app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
+
+/*
 var server = app.listen(app.get('port'), ip, function() {
   console.log('Express server listening on port ' + server.address().port);
+});
+*/
+app.listen(LISTEN_PORT, LISTEN_IP, function () {
+	console.log('Listening on ' + LISTEN_PORT + '...');
 });
 
 // tell the socket.io server to share the port with existing http server.
