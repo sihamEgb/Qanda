@@ -58,16 +58,14 @@ app.use(function(err, req, res, next) {
 
 // customize port,ip to openshift
 
-var ip = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
-
+var ip = process.env.OPENSHIFT_NODEJS_IP;
         if (typeof ipaddress === "undefined") {
             console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1');
             ipaddress = "127.0.0.1";
         };
 
 
-app.set('port', port);
+app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 
 var server = app.listen(app.get('port'), ip, function() {
   console.log('Express server listening on port ' + server.address().port);
